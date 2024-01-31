@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login</title>
+    <script src="path/ke/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="path/ke/sweetalert2.min.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9338cZcWjwN2xVkO7MMfMV-O3G6XAbnRF9w&usqp=CAU" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .password span{
+            position: relative;
+            left: 130px;
+        }
+    </style>    
+</head>
+<style> 
+.kotak-biru {
+  background-color: Blue;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+input[type="text"]{
+    width:93%;
+    padding:8px 10px;
+}
+input[type="password"]{
+    width:93%;
+    padding:8px 10px;
+}
+button{
+    padding:8px 0px;
+    width:99%;
+    color:white;
+    background-color: blue;
+    border:none
+}
+</style>
+
+<body>
+  
+  <div class="kotak-biru">
+    <p id="teks-di-atas-kotak">
+      <h1> USER LOGIN </h1>
+    </p>
+  </div>
+  <br><br>
+<div class="container">
+    <div class="login-box">
+       
+            <div class="input">
+                <div class="username">
+                    <input type="text" name="user" autocomplete="off" placeholder="E-Mail">
+                </div>
+                <br>
+                <div class="password" style="position: relative;">
+                    <input type="password" id="pw" name="pw" placeholder="Password">
+                </div>
+                <br>
+                <input type="checkbox" id="show" name="show" class="show" onchange="togglePasswordVisibility()">Show Password
+            </div>
+            <br>
+            <button type="submit" type="submit">Login</button>
+        <script>
+            function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('pw');
+            var showPasswordCheckbox = document.getElementById('show');
+
+            
+            passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+        }
+
+        </script>
+    </body>
+</html>
